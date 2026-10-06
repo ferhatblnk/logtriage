@@ -1,0 +1,51 @@
+# Demo stack: a sample API that fails on purpose, Loki, LogTriage and a stand-in for Jira.
+#
+#   docker compose up --build
+#
+# Then open http://localhost:8081 and watch the issues arrive.
+
+services:
+  loki:
+    image: grafana/loki:3.7.8
+    ports:
+      - "3100:3100"
+
+  orders-api:
+    build:
+      context: .
+      dockerfile: samples/Dockerfile
+      args:
+        PROJECT: SampleApi
+    environment:
+      Loki__Url: http://loki:3100
+      Demo__Traffic: "true"
+    depends_on:
+      - loki
+
+  fake-jira:
+    build:
+      context: .
+      dockerfile: samples/Dockerfile
+      args:
+        PROJECT: FakeJira
+    ports:
+      - "8081:8080"
+
+  logtriage:
+    build: .
+    environment:
+      Loki__Url: http://loki:3100
+      Sync__DryRun: "false"
+      Sync__IntervalSeconds: "15"
+      Jira__BaseUrl: http://fake-jira:8080
+      Jira__BrowseUrl: http://localhost:8081
+      Jira__Email: demo@example.com
+      Jira__ApiToken: demo-token
+      Jira__ProjectKey: DEMO
+      Issue__IncludeRequestData: "true"
+      Api__Key: demo
+    ports:
+      - "8080:8080"
+    depends_on:
+      - loki
+      - fake-jira

@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <RootNamespace>LogTriage</RootNamespace>
+    <AssemblyName>LogTriage</AssemblyName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <InternalsVisibleTo Include="LogTriage.Tests" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,12 @@
+<Solution>
+  <Folder Name="/samples/">
+    <Project Path="samples/FakeJira/FakeJira.csproj" />
+    <Project Path="samples/SampleApi/SampleApi.csproj" />
+  </Folder>
+  <Folder Name="/src/">
+    <Project Path="src/LogTriage/LogTriage.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/LogTriage.Tests/LogTriage.Tests.csproj" />
+  </Folder>
+</Solution>

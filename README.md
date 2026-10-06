@@ -195,7 +195,8 @@ The service has no third-party runtime dependencies. Contributions are welcome; 
 
 ## Read more
 
-- [Hatalar Loki'de duruyor, peki onlara kim bakıyor?](https://medium.com/@ferhatblnk/hatalar-lokide-duruyor-peki-onlara-kim-bak%C4%B1yor-33532ab581b0): why LogTriage exists and the decisions behind it. In Turkish.
+- [Your errors are sitting in Loki. Who's looking at them?](https://medium.com/@ferhatblnk/your-errors-are-sitting-in-loki-whos-looking-at-them-cf200c590bcc): why LogTriage exists and the decisions behind it.
+- [Hatalar Loki'de duruyor, peki onlara kim bakıyor?](https://medium.com/@ferhatblnk/hatalar-lokide-duruyor-peki-onlara-kim-bak%C4%B1yor-33532ab581b0): the same article in Turkish.
 
 ## License
 

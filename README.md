@@ -193,6 +193,10 @@ dotnet test
 
 The service has no third-party runtime dependencies. Contributions are welcome; see [CONTRIBUTING.md](CONTRIBUTING.md). To report a vulnerability, see [SECURITY.md](SECURITY.md).
 
+## Read more
+
+- [Hatalar Loki'de duruyor, peki onlara kim bakıyor?](https://medium.com/@ferhatblnk/hatalar-lokide-duruyor-peki-onlara-kim-bak%C4%B1yor-33532ab581b0): why LogTriage exists and the decisions behind it. In Turkish.
+
 ## License
 
 [MIT](LICENSE). The software is provided as is, without warranty of any kind.

@@ -26,3 +26,4 @@ public sealed partial class SyncWorker(SyncService sync, IOptions<SyncOptions> o
     [LoggerMessage(Level = LogLevel.Warning, Message = "Sync run failed and will be retried on the next interval: {Error}: {Detail}")]
     private partial void LogFailed(string error, string detail);
 }
+
